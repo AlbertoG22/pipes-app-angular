@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -25,7 +25,9 @@ registerLocaleData( localeFrCA );
     BrowserAnimationsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es-MX' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
