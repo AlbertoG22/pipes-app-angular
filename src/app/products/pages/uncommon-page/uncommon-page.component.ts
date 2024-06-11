@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './uncommon-page.component.css'
 })
 export class UncommonPageComponent {
-  // i18n Select
+  // i18n Select Pipe
   public name: string = 'Alberto';
   public gender: 'male'|'female' = 'male';
   public invitationMap = {
@@ -19,7 +19,7 @@ export class UncommonPageComponent {
     this.gender = 'female';
   }
 
-  // i18nPlural
+  // i18nPlural Pipe
   public clients: string[] = ['Maria', 'Pedro', 'Alberto', 'Carlos', 'Eduardo', 'Melissa', 'Natalia'];
   public clientsMap = {
     '=0': 'no tenemos ningún cliente esperando.',
@@ -31,4 +31,11 @@ export class UncommonPageComponent {
   deleteClient(): void {
     this.clients.shift();
   }
+
+  // KeyValue Pipe
+  public person = {
+    name: 'Alberto',
+    age: 25,
+    address: 'Colima, México'
+  };
 }
